@@ -10,7 +10,7 @@ function WhyUs() {
             <div className="row mt-4">
                 <div className="col-md-3">
                     <div className="card card__border--warning">
-                        <img src="assets/icon_complete.png" className="card-img-top" style={{width: "32px", marginLeft: "16px", marginTop: "16px"}} alt="..."/>
+                        <img src="./images/icon_complete.png" className="card-img-top" style={{width: "32px", marginLeft: "16px", marginTop: "16px"}} alt="..."/>
                         <div className="card-body">
                             <h5 className="card-title">Mobil Lengkap</h5>
                             <p className="card-text text--warning">Tersedia banyak pilihan mobil,<br/> kondisi masih baru, bersih dan <br/>terawat</p>
@@ -19,7 +19,7 @@ function WhyUs() {
                 </div>
                 <div className="col-md-3">
                     <div className="card card__border--danger">
-                        <img src="assets/icon_price.png" className="card-img-top" style={{width: "32px", marginLeft: "16px", marginTop: "16px"}} alt="..."/>
+                        <img src="./images/icon_price.png" className="card-img-top" style={{width: "32px", marginLeft: "16px", marginTop: "16px"}} alt="..."/>
                         <div className="card-body">
                             <h5 className="card-title">Mobil Murah</h5>
                             <p className="card-text text--danger">Harga murah dan bersaing, bisa <br/> bandingkan harga kami dengan<br/> rental mobil lain</p>
@@ -28,7 +28,7 @@ function WhyUs() {
                 </div>
             <div className="col-md-3">
                 <div className="card card__border--darkblue">
-                <img src="assets/icon_24hrs.png" className="card-img-top" style={{width: "32px", marginLeft: "16px", marginTop: "16px"}} alt="..."/>
+                <img src="./images/icon_24hrs.png" className="card-img-top" style={{width: "32px", marginLeft: "16px", marginTop: "16px"}} alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">Layanan 24 Jam</h5>
                     <p className="card-text text--darkblue">Siap melayani kebutuhan Anda <br/>selama 24 jam nonstop. Kami juga<br/> tersedia di akhir minggu</p>
@@ -37,7 +37,7 @@ function WhyUs() {
             </div>
             <div className="col-md-3">
                 <div className="card card__border--limegreen">
-                <img src="assets/icon_professional.png" className="card-img-top" style={{width: "32px", marginLeft: "16px", marginTop: "16px"}} alt="..."/>
+                <img src="./images/icon_professional.png" className="card-img-top" style={{width: "32px", marginLeft: "16px", marginTop: "16px"}} alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">Sopir Profesional</h5>
                     <p className="card-text text--limegren">Sopir yang profesional,<br/> berpengalaman, jujur, ramah dan<br/> selalu tepat waktu</p>

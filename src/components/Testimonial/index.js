@@ -14,10 +14,10 @@ function Testimonial() {
                         <div className="carousel-item active bg--aliceblue">
                             <div className="row mx-4 my-5">
                                 <div className="col-xl-2 m-auto">
-                                    <img src="assets/img_photo.png" className="d-block testimonial__img m-auto" alt="Person"/>
+                                    <img src="./images/img_photo.png" className="d-block testimonial__img m-auto" alt="Person"/>
                                 </div>
                                 <div className="col-xl-10">
-                                    <img src="assets/Rate.png" className="testimonial__rating" alt="Rating"/>
+                                    <img src="./images/Rate.png" className="testimonial__rating" alt="Rating"/>
                                     <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
                                     <p className="testimonial__name">John Dee 32, Bromo</p>
                                 </div>
@@ -26,10 +26,10 @@ function Testimonial() {
                         <div className="carousel-item bg--aliceblue">
                             <div className="row mx-4 my-5">
                                 <div className="col-xl-2 m-auto">
-                                    <img src="assets/img_photo_2.png" className="d-block testimonial__img m-auto" alt="Person"/>
+                                    <img src="./images/img_photo_2.png" className="d-block testimonial__img m-auto" alt="Person"/>
                                 </div>
                                 <div className="col-xl-10">
-                                    <img src="assets/Rate.png" className="testimonial__rating" alt="Rating"/>
+                                    <img src="./images/Rate.png" className="testimonial__rating" alt="Rating"/>
                                     <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod””</p>
                                     <p className="testimonial__name">John Dee 32, Bromo</p>
                                 </div>

@@ -15,7 +15,7 @@ function Hero() {
             </Link>
           </div>
           <div className="col-md-6">
-            <img src="assets/img_car.png" alt="Image Car" className="img-car"/>
+            <img src="./images/img_car.png" alt="Image Car" className="img-car"/>
           </div>
         </div>
       </div>

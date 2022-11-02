@@ -20,16 +20,16 @@ function Footer() {
           <div className="col-md-4">
             <p>Connect with us</p>
             <div className="icon-footer">
-              <a href="https://www.facebook.com/" target="_blank"><img src="assets/icon_facebook.png" alt="fb"/></a>
-              <a href="https://www.instagram.com/ntrioooo/" target="_blank"><img src="assets/icon_instagram.png" alt="ig"/></a>
-              <a href="https://twitter.com/inobraaain/" target="_blank"><img src="assets/icon_twitter.png" alt="twt"/></a>
-              <a href="https://mail.google.com/mail/" target="_blank"><img src="assets/icon_mail.png" alt="mail"/></a>
-              <a href="https://www.twitch.tv/" target="_blank"><img src="assets/icon_twitch.png" alt="twitch"/></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="./images/icon_facebook.png" alt="fb"/></a>
+              <a href="https://www.instagram.com/ntrioooo/" target="_blank"><img src="./images/icon_instagram.png" alt="ig"/></a>
+              <a href="https://twitter.com/inobraaain/" target="_blank"><img src="./images/icon_twitter.png" alt="twt"/></a>
+              <a href="https://mail.google.com/mail/" target="_blank"><img src="./images/icon_mail.png" alt="mail"/></a>
+              <a href="https://www.twitch.tv/" target="_blank"><img src="./images/icon_twitch.png" alt="twitch"/></a>
             </div>
           </div>
           <div className="col-md-3">
             <p>Copyright Binar 2022</p>
-            <a href="https://www.binaracademy.com/" target="_blank"><img src="assets/logo.png" alt="logo"/></a>
+            <a href="https://www.binaracademy.com/" target="_blank"><img src="./images/logo.png" alt="logo"/></a>
           </div>
         </div>
       </div>

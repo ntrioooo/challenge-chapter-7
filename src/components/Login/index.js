@@ -100,20 +100,20 @@ function Login() {
                             <input type="password" id="password" className='form-control' required onChange={(e) => setPassword(e.target.value)} />
                             <label for="password" className="form-label">Password</label>
                         </div>
-                        <input type="submit" className='btn btn-primary' value={isLoading ? "Login" : "Login"} />
+                        <input type="submit" className='btn btn-primary me-3' value={isLoading ? "Login" : "Login"} />
+                        <GoogleLogin
+                        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                          buttonText="Login with Google"
+                          onSuccess={haldleSuccessGoogle}
+                          onFailure={haldleFailureGoogle}
+                          cookiePolicy={'single_host_origin'}
+                        />
 
                     </form>
                 ) : (
                     // <Navigate to = '/'></Navigate>
                     <input type="submit" className='btn btn-danger' value="Logout" onClick={handleLogout} />
                 )}
-            <GoogleLogin
-            clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-              buttonText="Login with Google"
-              onSuccess={haldleSuccessGoogle}
-              onFailure={haldleFailureGoogle}
-              cookiePolicy={'single_host_origin'}
-            />
             </div>
         </div>
     )

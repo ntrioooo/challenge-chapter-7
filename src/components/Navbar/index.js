@@ -5,7 +5,7 @@ function Navbar() {
     <div>
         <nav className="navbar fixed-top navbar-expand-lg navbar-light" style={{backgroundColor: "#F1F3FF"}}>
             <div className="container">
-            <a className="navbar-brand" href="#home"><img src="assets/logo.png" alt="Logo"/></a>
+            <a className="navbar-brand" href="#home"><img src="./images/logo.png" alt="Logo"/></a>
             <button className="btn btn__offcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <span className="navbar-toggler-icon"></span>
             </button>
