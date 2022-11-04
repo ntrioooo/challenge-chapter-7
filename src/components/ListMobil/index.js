@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getListMobil } from '../../actions/mobilAction';
-import Navbar from '../Navbar'
-import Search from '../Search'
-import Footer from '../Footer'
-import Hero from '../Hero'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faGear, faUserGroup } from '@fortawesome/free-solid-svg-icons'
 
@@ -29,14 +25,13 @@ const ListMobil = ({submit, data, penumpang, tipeDriver, tanggal, waktu}) => {
     const jPenumpang = penumpang;
     const tDriver = tipeDriver === 'Dengan Sopir' ? true : false
     let d = (`${tanggal}T${waktu}`);
-    console.log(d); // T
+    // console.log(d); 
     let formdate = Date.parse(d);
 
-    console.log(Date.parse(tanggal)) // NaN
-    console.log(typeof (formdate)) // Number
+    // console.log(Date.parse(tanggal))
+    // console.log(typeof (formdate))
 
     useEffect(() => {
-
         // get mobil
         console.log("1. use effect component");
         dispatch(getListMobil());
@@ -45,59 +40,55 @@ const ListMobil = ({submit, data, penumpang, tipeDriver, tanggal, waktu}) => {
 
     return (
         <div>
-            <Navbar/>
-            <Hero/>
-            <Search/>
             <div className="container mt-4">
             <div className="row">
-  {getListMobilResult ? (
-    getListMobilResult
-      .filter(
-        (mobil) =>
-          mobil.capacity >= jPenumpang &&
-          mobil.driver === tDriver &&
-          Date.parse(waktuMobil(mobil.availableAt)) > formdate
-      )
-      .map((mobil) => {
-        return (
-          <div className="col-md-4" key={mobil.id}>
-            <div className="card mb-3">
-              <img
-                src={`https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/public/images/${
-                  mobil.image.split("/")[2]
-                }`}
-                className="card-img-top"
-                style={{ height: "300px", minWidth: "300px" }}
-                alt={mobil.manufacture}
-              />
-              <div className="card-body">
-                <p className="card-text mb-2">
-                  {mobil.type} {mobil.model}
-                </p>
-                <h5 className="card-title mb-2">Rp{mobil.rentPerDay} / Hari</h5>
-                <p className="card-text mb-2">{mobil.description}</p>
-                <p className="card-text mb-2 ">
-                  <FontAwesomeIcon icon={faUserGroup} /> {mobil.capacity}
-                </p>
-                <p className="card-text mb-2 ">
-                  <FontAwesomeIcon icon={faGear} /> {mobil.transmission}
-                </p>
-                <p className="card-text mb-2 ">
-                  <FontAwesomeIcon icon={faCalendar} /> {mobil.year}
-                </p>
-              </div>
+            {getListMobilResult ? (
+              getListMobilResult
+                .filter(
+                  (mobil) =>
+                    mobil.capacity >= jPenumpang &&
+                    mobil.available === tDriver && 
+                    Date.parse(waktuMobil(mobil.availableAt)) > formdate 
+                )
+                .map((mobil) => {
+                  return (
+                    <div className="col-md-4" key={mobil.id}>
+                      <div className="card mb-3">
+                        <img
+                          src={`https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/public/images/${
+                            mobil.image.split("/")[2]
+                          }`}
+                          className="card-img-top"
+                          style={{ height: "300px", minWidth: "300px" }}
+                          alt={mobil.manufacture}
+                        />
+                        <div className="card-body">
+                          <p className="card-text mb-2">
+                            {mobil.type} {mobil.model}
+                          </p>
+                          <h5 className="card-title mb-2">Rp{mobil.rentPerDay} / Hari</h5>
+                          <p className="card-text mb-2">{mobil.description}</p>
+                          <p className="card-text mb-2 ">
+                            <FontAwesomeIcon icon={faUserGroup} /> {mobil.capacity}
+                          </p>
+                          <p className="card-text mb-2 ">
+                            <FontAwesomeIcon icon={faGear} /> {mobil.transmission}
+                          </p>
+                          <p className="card-text mb-2 ">
+                            <FontAwesomeIcon icon={faCalendar} /> {mobil.year}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })
+            ) : getListMobilLoading ? (
+              <p>Loading ...</p>
+            ) : (
+              <p>{getListMobilError ? getListMobilError : "Data Kosong"}</p>
+            )}
+        </div>
             </div>
-          </div>
-        );
-      })
-  ) : getListMobilLoading ? (
-    <p>Loading ...</p>
-  ) : (
-    <p>{getListMobilError ? getListMobilError : "Data Kosong"}</p>
-  )}
-</div>
-            </div>
-            <Footer/>
         </div>
     );
 }

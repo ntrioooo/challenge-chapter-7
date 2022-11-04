@@ -37,8 +37,8 @@ function Testimonial() {
                         </div>
                     </div>
                     <div className="text-center">
-                        {/* <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" className="testimonial__media">&#8249;</a>
-                        <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" className="testimonial__media">&#8250;</a> */}
+                        <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" className="testimonial__media">&#8249;</a>
+                        <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" className="testimonial__media">&#8250;</a>
                     </div>
                     </div>
                 </div>

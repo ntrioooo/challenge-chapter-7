@@ -35,7 +35,7 @@ export const getListMobil = () => {
                 })
             })
             .catch((error) => {
-                console.log("4. Gagal dapat API", error);
+                console.log("3. Gagal dapat API", error);
                 // error
                 dispatch({
                     type: GET_LIST_MOBIL,

@@ -12,8 +12,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
-import ListMobil from './components/ListMobil'
-import Login from './components/Login'
+import {LandingPage, SearchPage} from './components'
 import Protected from "./components/Protected";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,18 +26,16 @@ root.render(
         <Routes>
           <Route 
             path='/' 
-            element= {<App/>}>
+            element= {<LandingPage/>}>
           </Route>
           <Route 
             path='/list-mobil' 
             element= 
             {
-              <ListMobil/>
+              <Protected>
+                <SearchPage/>
+              </Protected>
             }>
-          </Route>
-          <Route 
-            path='/login' 
-            element= {<Login/>}>
           </Route>
         </Routes>
       </BrowserRouter>

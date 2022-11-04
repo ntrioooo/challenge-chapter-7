@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import Navbar from '../Navbar';
+import Navbar from '../LandingPage/navbar';
 import { GoogleLogin } from 'react-google-login';
 
 async function doLogin({ email, password }) {
