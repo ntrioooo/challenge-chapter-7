@@ -33,9 +33,7 @@ root.render(
             path='/list-mobil' 
             element= 
             {
-            <Protected>
               <ListMobil/>
-            </Protected>
             }>
           </Route>
           <Route 

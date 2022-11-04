@@ -9,5 +9,6 @@ import Testimonial from './Testimonial'
 import Banner from './CTA'
 import Faq from './Faq'
 import Footer from './Footer'
+import Search from './Search'
 
-export { ListMobil, ResponsiveAppBar, Hero, Service, Login, Protected, WhyUs, Testimonial, Banner, Faq, Footer }
+export { ListMobil, ResponsiveAppBar, Hero, Service, Login, Protected, WhyUs, Testimonial, Banner, Faq, Footer, Search }

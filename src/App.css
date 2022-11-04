@@ -64,6 +64,7 @@ ul li a:hover:after {
 #home {
   padding-top: 3rem;
   background-color: #f1f3ff;
+  margin-bottom: -42px;
 }
 
 #our__services, #why__us, #testimonial, #cta__banner, #faq {
@@ -222,4 +223,235 @@ h5 {
   text-decoration: none;
   color: #000;
   font-weight: 600;
+}
+
+.form {
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  padding: 24px;
+  margin-top: -42px;
+  z-index: 99;
+  position: relative;
+}
+
+#find-car {
+  background-color: #5CB85F;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Helvetica';
+  padding: 8px 12px;
+  margin-right: 3px;
+}
+
+#clear-car {
+  background-color: #5CB85F;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Helvetica';
+  padding: 8px 12px;
+}
+
+input#date {
+  width: 210.75px;
+  height: 36px;
+}
+
+select#tipe-driver {
+  width: 210.75px;
+  height: 36px;
+}
+
+input#time {
+  width: 210.75px;
+  height: 36px;
+}
+
+input#penumpang {
+  width: 210.75px;
+  height: 36px;
+}
+
+input#penumpang::placeholder {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8A8A8A;
+  padding: 9px 12px;
+}
+
+input {
+  border: 1px solid #D0D0D0;
+  border-radius: 2px;
+}
+
+.form label{
+  font-size: 12px;
+  font-family: 'Helvetica';
+  line-height: 18px;
+}
+
+.form-select {
+  font-size: 12px;
+  font-family: 'Helvetica';
+  line-height: 18px;
+  color: #8A8A8A;
+}
+
+.btn-js {
+  border-radius: 2px;
+  width: 100%;
+  padding: 8px 12px;
+  font-family: 'Helvetica';
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.i-js {
+  color: rgba(138, 138, 138, 1);
+}
+
+.text-js {
+  font-family: 'Helvetica';
+  font-size: 14px;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Navbar */
+  .navbar {
+      /* position: unset; */
+  }
+  .navbar span, .btn__offcanvas {
+      display: block;
+  }
+
+  .offcanvas {
+      width: 50%;
+  }
+  /* End Navbar */
+
+  /* Home */
+  .img-car {
+      max-width: 344px;
+      max-height: 199px;
+      right: 0;
+      margin-top: 24px;
+  }
+
+  #home {
+      padding-top: 1px;
+      margin-top: -30px;
+  }
+  /* End Home */
+
+  /* Our Services */
+  #our__services {
+      padding-top: 60px;
+  }
+
+  #our__services img {
+      max-width: 252px;
+      max-height: 228px;
+      display: flex;
+      margin: auto;
+  }
+
+  #our__services .col-md-5 {
+      margin-left: 0px !important;
+      margin-top: 24px;
+  }
+  /* End Our Services */
+
+  /* Why Us */
+  #why__us {
+      padding-top: 60px;
+  }
+
+  #why__us .container h3 {
+      text-align: center;
+  }
+
+  #why__us .container h3 + p {
+      text-align: center;
+  }
+
+  #why__us .col-md-3 {
+      margin-top: 16px;
+  }
+
+  #why__us .row {
+      margin-top: 16px !important;
+  }
+  /* End Why Us */
+
+  /* Testimonial */
+  #testimonial {
+      padding-top: 60px;
+  }
+
+  #testimonial .carousel-item {
+      border-radius: 8px;
+  }
+
+  #testimonial .testimonial__media {
+      margin: 16px 24px 0 0;
+  }
+
+  #carouselExampleControls {
+      min-width: 100%;
+  }
+
+  #testimonial .testimonial__rating {
+      display: flex;
+      margin: 24px auto;
+  }
+  /* End Testimonial */
+
+  /* CTA Banner */
+  #cta__banner {
+      padding-top: 60px;
+      margin: 0 16px;
+  }
+
+  #cta__banner p {
+      margin: auto;
+      max-width: 212px;
+  }
+
+  #cta__banner button {
+      margin: 32px 0 64px 0;
+  }
+  /* End CTA Banner */
+  
+  /* FAQ */
+  #faq {
+      padding-top: 60px;
+  }
+
+  #faq h3 {
+      text-align: center;
+  }
+
+  #faq h3 + p {
+      text-align: center;
+  }
+  /* End FAQ */
+
+  /* Footer */
+  footer {
+      padding-top: 60px;
+  }
+
+  footer .icon-footer {
+      margin-bottom: 16px;
+  }
+  /* End Footer */
+  
 }
