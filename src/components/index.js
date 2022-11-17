@@ -1,4 +1,4 @@
-import LandingPage from './LandingPage'
-import SearchPage from './Search'
+import LandingPage from './LandingPage';
+import SearchPage from './Search';
 
-export { LandingPage, SearchPage }
+export { LandingPage, SearchPage };

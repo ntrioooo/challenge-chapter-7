@@ -1,14 +1,14 @@
-import { 
-  LandingPage
-} 
-  from './components'
 import React from 'react';
-import './App.css'
+import {
+  LandingPage,
+}
+  from './components';
+import './App.css';
 
 function App() {
   return (
     <div>
-      <LandingPage/>
+      <LandingPage />
     </div>
   );
 }
