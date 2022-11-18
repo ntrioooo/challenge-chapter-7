@@ -5,7 +5,7 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
 async function doLoginWithGoogle(token) {
   // Sesuaikan endpoint
-  const response = await fetch('http://localhost:8000/api/v1/google', {
+  const response = await fetch('https://be-7-production.up.railway.app/api/v1/google/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
