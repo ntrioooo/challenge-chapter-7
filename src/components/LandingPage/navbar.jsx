@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 async function doLoginWithGoogle(token) {
   // Sesuaikan endpoint
-  const response = await fetch('https://be-7-production.up.railway.app/', {
+  const response = await fetch('https://be-7-production.up.railway.app/api/v1/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
