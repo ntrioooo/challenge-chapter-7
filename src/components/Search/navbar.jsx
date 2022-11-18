@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { GoogleLogin } from 'react-google-login';
+// import { GoogleLogin } from 'react-google-login';
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
 async function doLoginWithGoogle(token) {
   // Sesuaikan endpoint
-  const response = await fetch('https://be-7-production.up.railway.app/api/v1/login', {
+  const response = await fetch('http://localhost:8000/api/v1/google', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -78,13 +79,14 @@ function Navbar() {
             </ul>
             <form className="form-inline my-2 my-lg-0">
               {!isLoggedIn ? (
-                <GoogleLogin
-                  clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-                  buttonText="Login asdasd"
-                  onSuccess={haldleSuccessGoogle}
-                  onFailure={haldleFailureGoogle}
-                  cookiePolicy="single_host_origin"
-                />
+                <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+                  <GoogleLogin
+                    buttonText="Login With Google"
+                    onSuccess={haldleSuccessGoogle}
+                    onFailure={haldleFailureGoogle}
+                    cookiePolicy="single_host_origin"
+                  />
+                </GoogleOAuthProvider>
               ) : (
                 <input type="submit" className="btn btn-danger" value="Logout" onClick={handleLogout} />
               // <Navigate to = '/list-mobil'></Navigate>

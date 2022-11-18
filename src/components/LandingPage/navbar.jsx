@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { GoogleLogin } from 'react-google-login';
+// import { GoogleLogin } from 'react-google-login';
 import { useState, useEffect } from 'react';
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
 async function doLoginWithGoogle(token) {
   // Sesuaikan endpoint
-  const response = await fetch('https://be-7-production.up.railway.app/api/v1/login', {
+  const response = await fetch('http://localhost:8000/api/v1/google', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -36,12 +37,13 @@ function Navbar() {
 
   const haldleSuccessGoogle = (response) => {
     // console.log(response);
-    // console.log(response.tokenId);
-    if (response.tokenId) {
-      doLoginWithGoogle(response.tokenId)
+    console.log(response.credential);
+    console.log(response);
+    if (response.credential) {
+      doLoginWithGoogle(response.credential)
         .then((_token) => {
-          localStorage.setItem('token', response.tokenId);
-          setIsLoggedIn(response.tokenId);
+          localStorage.setItem('token', response.credential);
+          setIsLoggedIn(response.credential);
         })
         .catch((err) => console.log(err.message))
         .finally(() => setIsLoading(false));
@@ -77,13 +79,16 @@ function Navbar() {
             </ul>
             <form className="form-inline my-2 my-lg-0">
               {!isLoggedIn ? (
-                <GoogleLogin
-                  clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-                  buttonText="Login asdasd"
-                  onSuccess={haldleSuccessGoogle}
-                  onFailure={haldleFailureGoogle}
-                  cookiePolicy="single_host_origin"
-                />
+                <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+                  <GoogleLogin
+                    onSuccess={(credentialResponse) => {
+                      haldleSuccessGoogle(credentialResponse);
+                    }}
+                    onError={() => {
+                      haldleFailureGoogle('Error Login');
+                    }}
+                  />
+                </GoogleOAuthProvider>
               ) : (
                 <input type="submit" className="btn btn-danger" value="Logout" onClick={handleLogout} />
               )}
